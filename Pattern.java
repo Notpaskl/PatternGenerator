@@ -8,6 +8,7 @@ public class Pattern{
     public static void main(String[] args) {
         stars(7);
         triangles(9); 
+        odds(9);
     }
 
     //Makes rows for stars
@@ -47,15 +48,32 @@ public class Pattern{
             System.out.println(displayTriangle);
         }
         
+        
+    }
+//Odd method
+    public static void odds(int start){
+        String displayOddNum = start + "";
+        for(int i = start; i >=1; i-=2){
+            displayOddNum= "";
+             for(int num = i ; num > 0; num--){
+                displayOddNum += i;
+            }
+        }
+       
+        System.out.println(displayOddNum);
     }
 
+//method 4
+//public static void eo(int maxE){
+
+//}
 
 
 
+//Method 5
+//public static void pyramid(int rows){
 
-
-
-
+//}
 
 
 }
