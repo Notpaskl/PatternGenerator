@@ -9,6 +9,8 @@ public class Pattern{
         stars(7);
         triangles(9); 
         odds(9);
+
+        pyramid(5);
     }
 
     //Makes rows for stars
@@ -55,12 +57,13 @@ public class Pattern{
         String displayOddNum = start + "";
         for(int i = start; i >=1; i-=2){
             displayOddNum= "";
-             for(int num = i ; num > 0; num--){
+            for(int num = i ; num > 0; num--){
                 displayOddNum += i;
             }
+            System.out.println(displayOddNum);
         }
        
-        System.out.println(displayOddNum);
+        //System.out.println(displayOddNum);
     }
 
 //method 4
@@ -68,12 +71,24 @@ public class Pattern{
 
 //}
 
-
-
+//Pre : 
+// 
 //Method 5
-//public static void pyramid(int rows){
-
-//}
+public static void pyramid(int rows){
+String print = "";
+int displayNum = 0;
+for (int i = 1; i<rows*2; i += 2){
+    print = "";
+    displayNum += 1;
+    for (int j = 1 ; j< displayNum; j++){
+        print+= " ";
+    }
+    for (int k = 0; k<(rows*2)-i ;k++){
+        print += displayNum;
+    }
+    System.out.println(print);
+}
+}
 
 
 }
