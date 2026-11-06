@@ -1,21 +1,23 @@
 // Class author: Pascal Somborn
 //Date created: October 30th 2026
-// General description: This program will...
+// General description: This will have a main method which calls on other methods to create a unique parttern
 
 public class Pattern{
 
 //Tests methods
+//Precondition: User inputs how many rows they want to produce from different methods in the program
+//Postcondition: Returns the current
     public static void main(String[] args) {
         stars(7);
         triangles(9); 
         odds(9);
-
+        eo(6);
         pyramid(5);
     }
 
     //Makes rows for stars
-    //pre condition
-    //post condition
+    //pre condition: User needs to input amount of rows
+    //post condition: Prints out the given rows with each star being equal to the row number
     
 
 
@@ -32,7 +34,8 @@ public class Pattern{
     }
 
     //makes rows for triangle
-    
+    //precondition: Requires user to input the amount of rows so that 
+    //postcondition: 
     public static void triangles(int rows){
         int triangle = 0;
         int i = 0;
@@ -67,12 +70,53 @@ public class Pattern{
     }
 
 //method 4
-//public static void eo(int maxE){
+//Precondition: 
+//Postcondition: 
+//Idea: Make a for loop and put an if statement which checks if row is even,print e, else if row is odd, print o
+//Idea 2:Make an if statement checking if letter start with O or E and put for loop for both true and false statement
 
-//}
+public static void eo(int maxE){
+String output= "E";
 
-//Pre : 
-// 
+if (maxE %2 ==0){
+    output= "O";
+}
+
+for(int i = 1; i<=maxE; i++ )
+    {
+  for(int j = 0; j<i ; j++){
+    System.out.print(output);
+  }  
+  System.out.println();
+
+  if (output.equals("E")){
+    output = "O";
+  }
+  else{
+    output = "E";
+  } 
+
+}
+//2nd half of method 4
+   for(int i = maxE-1; i>0; i-- )
+    {
+  for(int j = 0; j<i ; j++){
+    System.out.print(output);
+  }  
+  System.out.println();
+
+  if (output.equals("E")){
+    output = "O";
+  }
+  else{
+    output = "E";
+  } 
+
+}
+}
+
+//Precondition: 
+//Postcondition:
 //Method 5
 public static void pyramid(int rows){
 String print = "";
